@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Chat - Private Home Automation for Google Chat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: rgba(30, 41, 59, 0.7);
+      --border: rgba(255, 255, 255, 0.1);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --primary: #38bdf8;
+      --accent: #818cf8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1.5rem;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 0 2rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 0.85rem;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--primary);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-bottom: 1.25rem;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #ffffff 0%, var(--primary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p.subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-top: 2rem;
+      backdrop-filter: blur(12px);
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .feature-item {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+    }
+
+    .feature-item h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+
+    .feature-item p {
+      font-size: 0.9rem;
+      margin-bottom: 0;
+    }
+
+    footer {
+      margin-top: auto;
+      padding-top: 3rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+
+    a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge">Google Chat Integration</div>
+      <h1>Home Chat</h1>
+      <p class="subtitle">A private, secure Google Chat bot bridging messaging with home automation infrastructure.</p>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>About the Application</h2>
+        <p>Home Chat is a dedicated assistant that allows family members to interact with private home automation services directly from Google Chat.</p>
+        <p>It processes incoming chat commands in real time, routes requests to private local infrastructure, and provides synchronous status updates and event notifications.</p>
+
+        <div class="features-grid">
+          <div class="feature-item">
+            <h3>Home Control</h3>
+            <p>Trigger and manage smart home actions and routines from within Google Chat.</p>
+          </div>
+          <div class="feature-item">
+            <h3>End-to-End Privacy</h3>
+            <p>Zero third-party analytics or external trackers. Data is processed strictly for command execution.</p>
+          </div>
+          <div class="feature-item">
+            <h3>Strict Authorization</h3>
+            <p>Commands are restricted to verified household members via user allowlists.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Contact & Support</h2>
+        <p>Home Chat is maintained privately by Mateusz Matejczyk for household automation control.</p>
+        <p>For questions or assistance regarding this integration, please contact: <a href="mailto:mateusz.matejczyk@gmail.com">mateusz.matejczyk@gmail.com</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <span>•</span>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+      <p>&copy; 2026 Home Chat. Operated by Mateusz Matejczyk.</p>
+    </footer>
+  </div>
+</body>
+</html>
