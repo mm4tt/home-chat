@@ -1,18 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><title>Privacy Policy - Home Chat</title></head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Home Chat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: rgba(30, 41, 59, 0.7);
+      --border: rgba(255, 255, 255, 0.1);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --primary: #38bdf8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1.5rem;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 2.5rem 0 1.5rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+
+    .last-updated {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-top: 1.5rem;
+      backdrop-filter: blur(12px);
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    p, ul {
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      margin-top: auto;
+      padding-top: 3rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+
+    a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+  </style>
+</head>
 <body>
-  <h1>Privacy Policy</h1>
-  <p><strong>Last updated:</strong> October 2026</p>
-  <p>This Google Chat application is a private home automation bot operated by Mateusz Matejczyk.</p>
-  
-  <h2>Data Collection and Usage</h2>
-  <p>The application only receives the message content and Google user identifier sent by the user in Google Chat in order to execute requested home automation actions.</p>
-  
-  <h2>Data Sharing and Storage</h2>
-  <p>No personal data, chat history, or identifiers are shared with third parties, sold, or used for advertising. Data is processed in real time and is not stored permanently.</p>
-  
-  <h2>Contact</h2>
-  <p>If you have any questions, contact the administrator.</p>
+  <div class="container">
+    <header>
+      <a href="index.html" class="back-link">&larr; Back to Home Chat</a>
+      <h1>Privacy Policy</h1>
+      <p class="last-updated">Effective date: October 4, 2026</p>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>1. Overview</h2>
+        <p>Home Chat ("we", "our", or "the application") is a private integration built to interface Google Chat with local home automation systems. We respect your privacy and are committed to protecting any information processed by this integration.</p>
+
+        <h2>2. Information We Process</h2>
+        <p>When you interact with Home Chat in Google Chat, the application may process:</p>
+        <ul>
+          <li><strong>User Profile Information:</strong> Display name and email address provided by Google Chat webhook events, used strictly to verify that the sender is an authorized household member.</li>
+          <li><strong>Message Content:</strong> The text of commands sent directly to the bot or mentioned in a space, used solely to execute the requested home automation action.</li>
+        </ul>
+
+        <h2>3. How Information Is Used</h2>
+        <p>The information processed is used exclusively to:</p>
+        <ul>
+          <li>Authenticate whether the user has permission to trigger home actions.</li>
+          <li>Execute requested smart home commands (e.g., opening gates, status checks).</li>
+          <li>Return status replies directly to the originating Google Chat thread.</li>
+        </ul>
+
+        <h2>4. Data Sharing and Third Parties</h2>
+        <p>We do not sell, rent, or trade your personal information. Data is not shared with any third parties or advertisers. All interactions occur directly between Google Chat servers and our private self-hosted backend.</p>
+
+        <h2>5. Data Retention & Security</h2>
+        <p>Message payloads are processed in memory and are not stored in external databases. Transient operational logs on the host server may record incoming events for debugging and reliability purposes, and are rotated and deleted automatically.</p>
+
+        <h2>6. Contact</h2>
+        <p>If you have any questions about this Privacy Policy, please contact Mateusz Matejczyk at <a href="mailto:mateusz.matejczyk@gmail.com">mateusz.matejczyk@gmail.com</a>.</p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <span>•</span>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+      <p>&copy; 2026 Home Chat. Operated by Mateusz Matejczyk.</p>
+    </footer>
+  </div>
 </body>
 </html>
